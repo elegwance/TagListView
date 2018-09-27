@@ -257,7 +257,7 @@ open class TagListView: UIView {
             tagBackgroundView.frame.origin = CGPoint(x: currentRowWidth, y: 0)
             tagBackgroundView.frame.size = tagView.bounds.size
             tagBackgroundView.layer.shadowColor = shadowColor.cgColor
-            tagBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: tagBackgroundView.bounds, cornerRadius: cornerRadius).cgPath
+            tagBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: tagBackgroundView.bounds, cornerRadius: tagCornerRadius).cgPath
             tagBackgroundView.layer.shadowOffset = shadowOffset
             tagBackgroundView.layer.shadowOpacity = shadowOpacity
             tagBackgroundView.layer.shadowRadius = shadowRadius
@@ -302,9 +302,9 @@ open class TagListView: UIView {
         tagView.highlightedBackgroundColor = tagHighlightedBackgroundColor
         tagView.selectedBackgroundColor = tagSelectedBackgroundColor
         tagView.titleLineBreakMode = tagLineBreakMode
-        tagView.tagCornerRadius = cornerRadius
-        tagView.tagBorderWidth = borderWidth
-        tagView.tagBorderColor = borderColor
+        tagView.tagCornerRadius = tagCornerRadius
+        tagView.tagBorderWidth = tagBorderWidth
+        tagView.tagBorderColor = tagBorderColor
         tagView.selectedBorderColor = selectedBorderColor
         tagView.paddingX = paddingX
         tagView.paddingY = paddingY
