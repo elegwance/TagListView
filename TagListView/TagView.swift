@@ -11,19 +11,19 @@ import UIKit
 @IBDesignable
 open class TagView: UIButton {
 
-    @IBInspectable open var cornerRadius: CGFloat = 0 {
+    @IBInspectable open var tagCornerRadius: CGFloat = 0 {
         didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = cornerRadius > 0
+            layer.cornerRadius = tagCornerRadius
+            layer.masksToBounds = tagCornerRadius > 0
         }
     }
-    @IBInspectable open var borderWidth: CGFloat = 0 {
+    @IBInspectable open var tagBorderWidth: CGFloat = 0 {
         didSet {
-            layer.borderWidth = borderWidth
+            layer.borderWidth = tagBorderWidth
         }
     }
     
-    @IBInspectable open var borderColor: UIColor? {
+    @IBInspectable open var tagBorderColor: UIColor? {
         didSet {
             reloadStyles()
         }

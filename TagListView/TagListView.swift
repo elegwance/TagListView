@@ -64,25 +64,25 @@ open class TagListView: UIView {
         }
     }
     
-    @IBInspectable open dynamic var cornerRadius: CGFloat = 0 {
+    @IBInspectable open dynamic var tagCornerRadius: CGFloat = 0 {
         didSet {
             for tagView in tagViews {
-                tagView.cornerRadius = cornerRadius
+                tagView.tagCornerRadius = tagCornerRadius
             }
         }
     }
-    @IBInspectable open dynamic var borderWidth: CGFloat = 0 {
+    @IBInspectable open dynamic var tagBorderWidth: CGFloat = 0 {
         didSet {
             for tagView in tagViews {
-                tagView.borderWidth = borderWidth
+                tagView.tagBorderWidth = tagBorderWidth
             }
         }
     }
     
-    @IBInspectable open dynamic var borderColor: UIColor? {
+    @IBInspectable open dynamic var tagBorderColor: UIColor? {
         didSet {
             for tagView in tagViews {
-                tagView.borderColor = borderColor
+                tagView.tagBorderColor = tagBorderColor
             }
         }
     }
@@ -302,9 +302,9 @@ open class TagListView: UIView {
         tagView.highlightedBackgroundColor = tagHighlightedBackgroundColor
         tagView.selectedBackgroundColor = tagSelectedBackgroundColor
         tagView.titleLineBreakMode = tagLineBreakMode
-        tagView.cornerRadius = cornerRadius
-        tagView.borderWidth = borderWidth
-        tagView.borderColor = borderColor
+        tagView.tagCornerRadius = cornerRadius
+        tagView.tagBorderWidth = borderWidth
+        tagView.tagBorderColor = borderColor
         tagView.selectedBorderColor = selectedBorderColor
         tagView.paddingX = paddingX
         tagView.paddingY = paddingY
