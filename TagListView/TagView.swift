@@ -34,16 +34,25 @@ open class TagView: UIButton {
             reloadStyles()
         }
     }
+    
+    @IBInspectable open var highlightedTextColor: UIColor = UIColor.white {
+        didSet {
+            reloadStyles()
+        }
+    }
+    
     @IBInspectable open var selectedTextColor: UIColor = UIColor.white {
         didSet {
             reloadStyles()
         }
     }
+    
     @IBInspectable open var titleLineBreakMode: NSLineBreakMode = .byTruncatingMiddle {
         didSet {
             titleLabel?.lineBreakMode = titleLineBreakMode
         }
     }
+    
     @IBInspectable open var paddingY: CGFloat = 2 {
         didSet {
             titleEdgeInsets.top = paddingY
@@ -94,6 +103,7 @@ open class TagView: UIButton {
                 // Instead, we keep the current color.
                 backgroundColor = highlightedBackgroundColor
             }
+            setTitleColor(highlightedTextColor, for: UIControl.State())
         }
         else if isSelected {
             backgroundColor = selectedBackgroundColor ?? tagBackgroundColor
