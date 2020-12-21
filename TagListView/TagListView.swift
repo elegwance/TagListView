@@ -345,7 +345,7 @@ open class TagListView: UIView {
         tagView.highlightedBackgroundColor = tagHighlightedBackgroundColor
         tagView.selectedBackgroundColor = tagSelectedBackgroundColor
         tagView.titleLineBreakMode = tagLineBreakMode
-        tagView.tagCornerRadius = cornerRadius
+        tagView.tagCornerRadius = tagCornerRadius
         tagView.tagBorderWidth = tagBorderWidth
         tagView.tagBorderColor = tagBorderColor
         tagView.selectedBorderColor = selectedBorderColor
